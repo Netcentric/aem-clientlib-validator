@@ -1,0 +1,3 @@
+#base=js
+ 
+editor/editor.module.js
