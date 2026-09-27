@@ -35,7 +35,7 @@ Some more detailed pointers are in the table below
 Validation | Fix
 --- | ---
 `[JSC_LANGUAGE_FEATURE] This language feature is only supported for ECMASCRIPT_xxxx mode or better` | Make sure to adjust the client library's property `jsProcessor` with a suitable `languageIn` flag, like `"[min:gcc;languageIn=ECMASCRIPT_2020]"`
-`
+
 Further information is contained in the [GCC documentation about warnings][gcc-warnings].
 
 
@@ -46,16 +46,16 @@ The [defaults of Google Closure Compiler standalone][gcc-options] seem more reas
 Therefore the recommendation is to reference only concrete and stable ES versions for `languageIn`.
 AEMaaCS (since 2025.5 ships with GCC v20231112) and AEM 6.5 (ships with GCC v20210106) support the following values:
 
-1. ECMASCRIPT3,
-1. ECMASCRIPT5,
-1. ECMASCRIPT_2015,
-1. ECMASCRIPT_2016,
-1. ECMASCRIPT_2017,
-1. ECMASCRIPT_2018,
-1. ECMASCRIPT_2019,
-1. ECMASCRIPT_2020,
-1. ECMASCRIPT_2021 (only AEMaaCS, GCC v20231112),
-1. ECMASCRIPT_NEXT (supported features depend on GCC version),
+1. `ECMASCRIPT3`,
+1. `ECMASCRIPT5`,
+1. `ECMASCRIPT_2015`,
+1. `ECMASCRIPT_2016`,
+1. `ECMASCRIPT_2017`,
+1. `ECMASCRIPT_2018`,
+1. `ECMASCRIPT_2019`,
+1. `ECMASCRIPT_2020`,
+1. `ECMASCRIPT_2021` (only AEMaaCS, GCC v20231112),
+1. `ECMASCRIPT_NEXT` (supported features depend on GCC version),
 
 Apart from those some values whose actual meaning are GCC version specific like `STABLE`, `UNSTABLE`, `ECMASCRIPT_NEXT`, `UNSUPPORTED`.
 
@@ -66,7 +66,7 @@ https://github.com/google/closure-compiler/blob/d3f956e12b3148ebb0bc096ef4a2183e
 still `ECMASCRIPT5` (the according feature tickets for ES6 support [#949](https://github.com/google/closure-compiler/issues/949), 
 [#950](https://github.com/google/closure-compiler/issues/950) are still not completed). 
 The CLI default from Google is meanwhile `ECMASCRIPT_NEXT` however this is not yet considered `STABLE` 
-(also see <discussion https://github.com/google/closure-compiler/discussions/4346>). 
+(also see <https://github.com/google/closure-compiler/discussions/4346>). 
 
 *For now one should stick with the AEM Client Library default for `languageOut` (which is `ECMASCRIPT5`), which means not overriding it on client library or OSGi configuration level*.
 
