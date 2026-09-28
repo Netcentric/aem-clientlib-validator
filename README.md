@@ -10,7 +10,9 @@
 
 Validates that FileVault content packages contain only Javascript files inside Client-Side libraries which can be minified without issues according to their (or the default) [minification configuration][clientlibs-jsprocessor].
 
-It doesn't validate CSS files but only JS files. Also it only supports the processor with name `gcc` (backed by [Google Closure Compiler][google-closure-compiler]) but no longer the deprecated `yui` (backed by [YUI Compressor](yui-compressor)).
+It doesn't validate CSS files but only JS files. Also it only supports the processor with name `gcc` (backed by [Google Closure Compiler][google-closure-compiler]) but no longer the deprecated `yui` (backed by [YUI Compressor][yui-compressor]).
+
+This validation is currently not performed by [aemanalyser-maven-plugin][aemanalyser-maven-plugin-issue].
 
 ## Implementation
 
@@ -102,7 +104,7 @@ You can use this validator with the [FileVault Package Maven Plugin][filevault-p
 
 Adobe, and AEM are either registered trademarks or trademarks of Adobe in the United States and/or other countries.
 
-[aemanalyser-maven-plugin]: https://github.com/adobe/aemanalyser-maven-plugin/tree/main/aemanalyser-maven-plugin
+[aemanalyser-maven-plugin-issue]: https://github.com/adobe/aemanalyser-maven-plugin/issues/418
 [filevault-validation]: https://jackrabbit.apache.org/filevault/validation.html
 [filevault-p-m-p]: https://jackrabbit.apache.org/filevault-package-maven-plugin/index.html
 [clientlibs-jsprocessor]: https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs#using-preprocessors

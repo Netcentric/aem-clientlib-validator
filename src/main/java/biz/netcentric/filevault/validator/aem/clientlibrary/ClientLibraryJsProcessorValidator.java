@@ -203,7 +203,7 @@ public class ClientLibraryJsProcessorValidator implements GenericJcrDataValidato
         filePath.iterator().forEachRemaining(pathElement -> {
             platformPathBuilder.append("/").append(pathElement.toString());
         });
-        // String platformPath = FilenameUtils.separatorsToUnix(filePath.toString());
+        // platform path must have forward slashes as separators
         return PlatformNameFormat.getRepositoryPath(platformPathBuilder.toString(), true);
     }
 
