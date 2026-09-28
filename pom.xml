@@ -8,7 +8,7 @@
   <name>AEM Clientlib FileVault Validator</name>
   <description>FileVault validator which verifies that the JavaScript files of a client library can be minified without issues.</description>
   <url>https://github.com/Netcentric/aem-clientlib-validator</url>
-  <inceptionYear>2024</inceptionYear>
+  <inceptionYear>2026</inceptionYear>
   <organization>
     <name>Cognizant Netcentric</name>
     <url>https://www.netcentric.biz/</url>
