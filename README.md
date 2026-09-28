@@ -102,6 +102,8 @@ You can use this validator with the [FileVault Package Maven Plugin][filevault-p
 </plugin>
 ```
 
+It requires at least Java 17 to run.
+
 Adobe, and AEM are either registered trademarks or trademarks of Adobe in the United States and/or other countries.
 
 [aemanalyser-maven-plugin-issue]: https://github.com/adobe/aemanalyser-maven-plugin/issues/418
