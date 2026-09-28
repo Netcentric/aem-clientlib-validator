@@ -12,19 +12,6 @@ on:
     - main
     types: [opened, synchronize, reopened]
 
-# restrict privileges except for setting commit status, adding PR comments and writing statuses
-permissions:
-  actions: read
-  checks: write
-  contents: read
-  deployments: read
-  issues: read
-  packages: read
-  pull-requests: write
-  repository-projects: read
-  security-events: read
-  statuses: write
-
 jobs:
   build:
     strategy:
@@ -67,7 +54,7 @@ jobs:
           if [ "${{ matrix.isMainBuildEnv }}" = "true" ]; then
             echo "MVN_ADDITIONAL_OPTS=-Dsonar.projectKey=Netcentric_aem-clientlib-validator -Dsonar.organization=netcentric -Dsonar.host.url=https://sonarcloud.io -Pjacoco-report" >> $GITHUB_ENV
             if [ "${{github.ref}}" = "refs/heads/main" ] && [ "${{github.event_name}}" = "push" ]; then
-              echo "MVN_GOAL=clean deploy org.sonarsource.scanner.maven:sonar-maven-plugin:sonar" >> $GITHUB_ENV
+              echo "MVN_GOAL=clean deploy org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar" >> $GITHUB_ENV
               echo "STEP_NAME_SUFFIX=(Deploys to Central Portal)" >> $GITHUB_ENV
             else
               echo "MVN_GOAL=clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar" >> $GITHUB_ENV
