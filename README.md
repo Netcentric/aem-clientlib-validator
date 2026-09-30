@@ -61,16 +61,9 @@ AEMaaCS (since 2025.5 ships with GCC v20231112) and AEM 6.5 (ships with GCC v202
 
 Apart from those some values whose actual meaning are GCC version specific like `STABLE`, `UNSTABLE`, `ECMASCRIPT_NEXT`, `UNSUPPORTED`.
 
- *The recommendation is to set flag `languageIn` to the latest stable version which is `ECMASCRIPT_2021` (for AEMaaCS) or `ECMASCRIPT_2020` (for AEM 6.5 compatibility)*.
+ *The recommendation is to set flag `languageIn` and `languageOut` to the latest stable version which is `ECMASCRIPT_2021` (for AEMaaCS) or `ECMASCRIPT_2020` (for AEM 6.5 compatibility)*.
 
-The stable output language (`languageOut`) version is according to 
-https://github.com/google/closure-compiler/blob/d3f956e12b3148ebb0bc096ef4a2183e79cea67a/src/com/google/javascript/jscomp/CompilerOptions.java#L3662
-still `ECMASCRIPT5` (the according feature tickets for ES6 support [#949](https://github.com/google/closure-compiler/issues/949), 
-[#950](https://github.com/google/closure-compiler/issues/950) are still not completed). 
-The CLI default from Google is meanwhile `ECMASCRIPT_NEXT` however this is not yet considered `STABLE` 
-(also see <https://github.com/google/closure-compiler/discussions/4346>). 
-
-*For now one should stick with the AEM Client Library default for `languageOut` (which is `ECMASCRIPT5`), which means not overriding it on client library or OSGi configuration level*.
+For further insights have a look at <https://github.com/google/closure-compiler/discussions/4346>. 
 
 In cases where you minify at build time already you should completely *disable minification at client library level* by setting client library property `jsProcessor` to `min:none`.
 
