@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>biz.netcentric.filevault.validator</groupId>
   <artifactId>aem-clientlib-validator</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>AEM Clientlib FileVault Validator</name>
   <description>FileVault validator which verifies that the JavaScript files of a client library can be minified without issues.</description>
@@ -34,7 +34,7 @@
   <scm>
     <connection>scm:git:ssh://git@github.com/Netcentric/aem-clientlib-validator</connection>
     <developerConnection>scm:git:ssh://git@github.com/Netcentric/aem-clientlib-validator</developerConnection>
-    <tag>HEAD</tag>
+    <tag>1.0.0</tag>
     <url>https://github.com/Netcentric/aem-clientlib-validator.git</url>
   </scm>
   <distributionManagement>
