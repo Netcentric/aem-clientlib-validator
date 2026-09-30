@@ -96,6 +96,7 @@ You can use this validator with the [FileVault Package Maven Plugin][filevault-p
 ```
 
 It requires at least Java 17 to run.
+Note that [incremental builds](https://jackrabbit.apache.org/filevault/validation.html#Incremental_Execution) in most cases do not properly validate JS files (as the according client library metadata is not known). Only the full validation leads to proper results.
 
 Adobe, and AEM are either registered trademarks or trademarks of Adobe in the United States and/or other countries.
 
